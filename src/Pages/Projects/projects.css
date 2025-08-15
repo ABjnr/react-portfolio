@@ -1,0 +1,216 @@
+/* Main container with gradient background */
+.projects-wrapper {
+  min-height: 100vh;
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+/* Animated title with gradient underline */
+.projects-title {
+  font-size: 3.5rem;
+  color: #2d3436;
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  animation: fadeInDown 0.8s ease;
+}
+
+.projects-title::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #007bff, #00d2ff);
+  border-radius: 2px;
+}
+
+/* Responsive grid layout for project cards */
+.projects-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  padding: 1rem;
+  animation: fadeInUp 0.8s ease 0.2s;
+  animation-fill-mode: both;
+}
+
+/* Project card with hover effects and gradient accent */
+.project-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #007bff, #00d2ff);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.project-card-title {
+  font-size: 1.8rem;
+  color: #2d3436;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.project-description {
+  font-size: 1.1rem;
+  color: #636e72;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Technology tag with subtle background */
+.project-tech {
+  font-size: 1rem;
+  color: #007bff;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 123, 255, 0.1);
+  border-radius: 8px;
+  display: inline-block;
+}
+
+/* Project link buttons with hover effects */
+.project-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.project-link {
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  display: block;
+  text-align: center;
+}
+
+.project-link.github {
+  background: #2d3436;
+  color: white;
+}
+
+.project-link.live {
+  background: #007bff;
+  color: white;
+}
+
+.project-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-link.github:hover {
+  background: #1e272e;
+}
+
+.project-link.live:hover {
+  background: #0056b3;
+}
+
+/* Animation keyframes */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Desktop breakpoint - Adjust spacing and font sizes */
+@media (max-width: 992px) {
+  .projects-wrapper {
+    padding: 4rem 1.5rem;
+  }
+
+  .projects-title {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .project-card-title {
+    font-size: 1.6rem;
+  }
+}
+
+/* Tablet breakpoint - Single column layout */
+@media (max-width: 768px) {
+  .projects-wrapper {
+    padding: 3rem 1rem;
+  }
+
+  .projects-title {
+    font-size: 2.5rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .project-card {
+    padding: 1.5rem;
+  }
+
+  .project-card-title {
+    font-size: 1.4rem;
+  }
+
+  .project-description {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile breakpoint - Compact layout */
+@media (max-width: 480px) {
+  .projects-title {
+    font-size: 2rem;
+  }
+
+  .project-card {
+    padding: 1.25rem;
+  }
+
+  .project-link {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}

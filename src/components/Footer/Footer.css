@@ -1,0 +1,79 @@
+.footer-social {
+  padding: 2rem 0;
+  background-color: #f8f9fa;
+  width: 100%;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.social-item {
+  transition: transform 0.2s ease;
+}
+
+.social-item:hover {
+  transform: translateY(-2px);
+}
+
+.social-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.social-link:hover {
+  color: #007bff;
+}
+
+.footer-copyright {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+.copyright-text {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Breakpoints for tablet and mobile devices */
+@media (max-width: 768px) {
+  .social-links {
+    gap: 1.5rem;
+    padding: 0 0.5rem;
+  }
+
+  .footer-social {
+    padding: 1.5rem 0;
+  }
+
+  .social-link {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-links {
+    gap: 1rem;
+  }
+
+  .footer-social {
+    padding: 1rem 0;
+  }
+}

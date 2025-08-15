@@ -1,0 +1,166 @@
+/* Header container with sticky positioning and shadow */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 4rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header-title {
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.header-logo {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.8rem;
+  font-weight: 700;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.header-logo:hover {
+  color: #007bff;
+}
+
+.header-nav {
+  margin-left: 2rem;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #555;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+/* Active link indicator with animated underline */
+.nav-link.active {
+  color: #007bff;
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #007bff;
+  transform: scaleX(1);
+  transition: transform 0.3s ease;
+}
+
+/* Tablet breakpoint - Stack layout for smaller screens */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .header-nav {
+    margin: 1rem 0 0 0;
+    width: 100%;
+  }
+
+  .nav-list {
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .header-logo {
+    font-size: 1.5rem;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 480px) {
+  .header {
+    padding: 0.75rem;
+  }
+
+  .header-logo {
+    font-size: 1.3rem;
+  }
+
+  .nav-list {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+  }
+
+  .nav-item {
+    flex: 1;
+    text-align: center;
+    max-width: 120px;
+  }
+
+  .nav-link {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    display: block;
+  }
+
+  .nav-link.active::after {
+    bottom: -2px;
+  }
+}
+
+/* Extra small devices and landscape orientation */
+@media (max-width: 430px), (max-height: 932px) and (orientation: landscape) {
+  .header {
+    padding: 0.5rem;
+  }
+
+  .header-logo {
+    font-size: 1.2rem;
+  }
+
+  .nav-list {
+    padding: 0.25rem 0;
+  }
+
+  .nav-item {
+    max-width: 100px;
+  }
+
+  .nav-link {
+    font-size: 0.85rem;
+    padding: 0.4rem;
+  }
+}
