@@ -18,7 +18,7 @@ export default function Footer() {
 
           <li className="social-item">
             <Link
-              href="https://github.com/ABjnr"
+              to="https://github.com/ABjnr"
               target="_blank"
               rel="noopener"
               title="GitHub"
@@ -30,7 +30,7 @@ export default function Footer() {
 
           <li className="social-item">
             <Link
-              href="https://instagram.com/anuuoluwa"
+              to="https://instagram.com/anuuoluwa"
               target="_blank"
               rel="noopener"
               title="Instagram"
@@ -42,7 +42,7 @@ export default function Footer() {
 
           <li className="social-item">
             <Link
-              href="https://www.linkedin.com/in/abraham-adeniyi-1b7b2b2a2/"
+              to="https://www.linkedin.com/in/abraham-adeniyi-1b7b2b2a2/"
               target="_blank"
               rel="noopener"
               title="LinkedIn"
